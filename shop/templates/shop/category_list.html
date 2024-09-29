@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead class="thead-blue">
+        <tr>
+            <th scope="col">Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for page in category_list %}
+        <tr>
+            <td> {{page.category}} </td>
+        </tr>
+            {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

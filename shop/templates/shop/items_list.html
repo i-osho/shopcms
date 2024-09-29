@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead class="thead-blue">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Buyer</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for page in items_list %}
+        <tr>
+            <td> {{page.item_name}} </td>
+            <td> {{page.brand_name}} </td>
+            <td> {{page.item_description}} </td>
+            <td> {{page.price}} </td>
+            <td> {{page.buyer}} </td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
